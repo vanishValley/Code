@@ -1,0 +1,129 @@
+/* 版心 */
+
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+body {
+    background-color: #f3f5f72a;
+}
+
+.header {
+    height: 100px;
+    background-color: #fff;
+}
+
+.header .wrapper {
+    padding: 29px;
+    display: flex;
+}
+
+.logo a {
+    display: block;
+    width: 195px;
+    height: 41px;
+    background-image: url(../image/LOGO.png);
+    font-size: 0px;
+}
+
+.nav {
+    margin-left: 102px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav li {
+    margin: 24px;
+}
+
+.nav li a {
+    display: block;
+    padding: 6px 8px;
+    line-height: 27px;
+    font-size: 19px;
+}
+
+.nav li .active,
+.nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+.search {
+    margin: 6px;
+    padding-left: 10px;
+    padding-right: 12px;
+    width: 412px;
+    height: 40px;
+    background-color: #f3f5f7;
+    border-radius: 20px;
+    display: flex; 
+}
+
+.search input {
+    flex: 1;
+    border: 0;
+    background-color: transparent;
+    /* 去掉了表单控件的焦点框 */
+    outline: none;
+}
+
+.search input::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+.search a {
+    align-self: center;
+    width: 16px;
+    height: 16px;
+    background-image: url(../image/search.png);
+}
+
+.user {
+    margin-left: 32px;
+    margin-top: 4px;
+}
+
+.user img {
+    vertical-align: middle;
+}
+
+.banner {
+    height: 420px;
+    background-color: #0092bc;
+    
+}
+
+.banner .wrapper {
+    height: 420px;
+    background-image: url(../uploads/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .left {
+    width: 191px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 3px 20px;
+}
+
+.banner .left a{
+    display: block;
+    height: 46px;
+    background: url(../image/right.png) no-repeat right center;
+
+    line-height: 46px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.banner .left a:hover {
+    background-image: url(../image/search.png);
+    color: #00a4ff;
+}

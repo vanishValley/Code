@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 余央木的个人主页</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">余央木</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="about.html">关于</a></li>
+                <li><a href="portfolio.html" class="active">作品集</a></li>
+                <li><a href="resume.html">简历</a></li>
+                <li><a href="contact.html">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">作品集</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="web">Web应用</button>
+                    <button class="filter-btn" data-filter="mobile">移动应用</button>
+                    <button class="filter-btn" data-filter="other">其他项目</button>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web">
+                        <img src="../assets/images/project1.jpg" alt="个人博客系统">
+                        <div class="portfolio-info">
+                            <h3>个人博客系统</h3>
+                            <p>使用React和Node.js开发的现代化博客系统</p>
+                            <div class="portfolio-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="demo-link">演示</a>
+                                <a href="#" class="github-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="web">
+                        <img src="../assets/images/project2.jpg" alt="电商平台">
+                        <div class="portfolio-info">
+                            <h3>电商平台</h3>
+                            <p>基于Vue.js和Spring Boot的完整电商解决方案</p>
+                            <div class="portfolio-tech">
+                                <span>Vue.js</span>
+                                <span>Spring Boot</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="demo-link">演示</a>
+                                <a href="#" class="github-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="mobile">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="健康追踪App">
+                        <div class="portfolio-info">
+                            <h3>健康追踪App</h3>
+                            <p>使用Flutter开发的跨平台健康管理应用</p>
+                            <div class="portfolio-tech">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>GetX</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="demo-link">演示</a>
+                                <a href="#" class="github-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="other">
+                        <img src="https://images.unsplash.com/photo-1485796826113-174aa68fd81b?auto=format&fit=crop&w=800&q=80" alt="AI图像处理工具">
+                        <div class="portfolio-info">
+                            <h3>AI图像处理工具</h3>
+                            <p>基于Python和TensorFlow的智能图像处理系统</p>
+                            <div class="portfolio-tech">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>OpenCV</span>
+                            </div>
+                            <div class="portfolio-links">
+                                <a href="#" class="demo-link">演示</a>
+                                <a href="#" class="github-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 余央木. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // 作品集筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // 移除所有按钮的active类
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // 添加当前按钮的active类
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

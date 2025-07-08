@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const fn = function fn(){
+      console.log(123);
+    }
+    fn()
+
+    const fn1 = () => {
+      console.log(1);
+    }
+    fn1()
+
+    const fn2 = (x) => {
+      console.log(x);
+    }
+    fn2(2)
+
+    //只有一个形参时候，可以省略小括号
+    const fn3 = x => {
+      console.log(x);
+    }
+    fn3(3)
+
+    //只有一行代码时候，可以省略大括号
+    const fn4 = x => console.log(4);
+    fn4(4)
+
+    //只有一行代码时候 ，可以省略return
+    const fn5 = x => x + x
+    console.log(fn5(2.5));
+
+    //箭头函数可以直接返回一个对相关
+    const fn6 = (uname) => ({ uname : uname })
+    let a = fn6('徐英杰')
+    console.log(a.uname);
+
+  </script>
+</body>
+</html>
